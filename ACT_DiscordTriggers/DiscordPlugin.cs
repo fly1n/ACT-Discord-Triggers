@@ -49,7 +49,7 @@ namespace ACT_DiscordTriggers {
       this.btnLeave = new System.Windows.Forms.Button();
       this.btnJoin = new System.Windows.Forms.Button();
       this.lblLog = new System.Windows.Forms.Label();
-      this.txtToken = new System.Windows.Forms.TextBox();
+      this.txtBotToken = new System.Windows.Forms.TextBox();
       this.lblBotTok = new System.Windows.Forms.Label();
       this.logList = new System.Windows.Forms.ListView();
       this.listColTim = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,7 +61,7 @@ namespace ACT_DiscordTriggers {
       // chkAutoConnect
       // 
       this.chkAutoConnect.AutoSize = true;
-      this.chkAutoConnect.Location = new System.Drawing.Point(120, 64);
+      this.chkAutoConnect.Location = new System.Drawing.Point(120, 65);
       this.chkAutoConnect.Name = "chkAutoConnect";
       this.chkAutoConnect.Size = new System.Drawing.Size(91, 17);
       this.chkAutoConnect.TabIndex = 59;
@@ -70,7 +70,7 @@ namespace ACT_DiscordTriggers {
       // 
       // discordConnectbtn
       // 
-      this.discordConnectbtn.Location = new System.Drawing.Point(21, 60);
+      this.discordConnectbtn.Location = new System.Drawing.Point(21, 61);
       this.discordConnectbtn.Name = "discordConnectbtn";
       this.discordConnectbtn.Size = new System.Drawing.Size(93, 23);
       this.discordConnectbtn.TabIndex = 58;
@@ -118,7 +118,7 @@ namespace ACT_DiscordTriggers {
       // 
       this.cmbChan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.cmbChan.FormattingEnabled = true;
-      this.cmbChan.Location = new System.Drawing.Point(21, 159);
+      this.cmbChan.Location = new System.Drawing.Point(21, 151);
       this.cmbChan.Name = "cmbChan";
       this.cmbChan.Size = new System.Drawing.Size(193, 21);
       this.cmbChan.TabIndex = 53;
@@ -126,7 +126,7 @@ namespace ACT_DiscordTriggers {
       // lblChan
       // 
       this.lblChan.AutoSize = true;
-      this.lblChan.Location = new System.Drawing.Point(18, 141);
+      this.lblChan.Location = new System.Drawing.Point(18, 133);
       this.lblChan.Name = "lblChan";
       this.lblChan.Size = new System.Drawing.Size(46, 13);
       this.lblChan.TabIndex = 52;
@@ -136,7 +136,7 @@ namespace ACT_DiscordTriggers {
       // 
       this.cmbServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.cmbServer.FormattingEnabled = true;
-      this.cmbServer.Location = new System.Drawing.Point(21, 113);
+      this.cmbServer.Location = new System.Drawing.Point(21, 105);
       this.cmbServer.Name = "cmbServer";
       this.cmbServer.Size = new System.Drawing.Size(193, 21);
       this.cmbServer.TabIndex = 51;
@@ -145,7 +145,7 @@ namespace ACT_DiscordTriggers {
       // lblServer
       // 
       this.lblServer.AutoSize = true;
-      this.lblServer.Location = new System.Drawing.Point(18, 99);
+      this.lblServer.Location = new System.Drawing.Point(18, 91);
       this.lblServer.Name = "lblServer";
       this.lblServer.Size = new System.Drawing.Size(38, 13);
       this.lblServer.TabIndex = 50;
@@ -172,7 +172,7 @@ namespace ACT_DiscordTriggers {
       // btnLeave
       // 
       this.btnLeave.Enabled = false;
-      this.btnLeave.Location = new System.Drawing.Point(120, 186);
+      this.btnLeave.Location = new System.Drawing.Point(120, 178);
       this.btnLeave.Name = "btnLeave";
       this.btnLeave.Size = new System.Drawing.Size(94, 23);
       this.btnLeave.TabIndex = 47;
@@ -183,7 +183,7 @@ namespace ACT_DiscordTriggers {
       // btnJoin
       // 
       this.btnJoin.Enabled = false;
-      this.btnJoin.Location = new System.Drawing.Point(21, 185);
+      this.btnJoin.Location = new System.Drawing.Point(21, 177);
       this.btnJoin.Name = "btnJoin";
       this.btnJoin.Size = new System.Drawing.Size(93, 23);
       this.btnJoin.TabIndex = 46;
@@ -194,19 +194,18 @@ namespace ACT_DiscordTriggers {
       // lblLog
       // 
       this.lblLog.AutoSize = true;
-      this.lblLog.Location = new System.Drawing.Point(18, 239);
+      this.lblLog.Location = new System.Drawing.Point(18, 209);
       this.lblLog.Name = "lblLog";
       this.lblLog.Size = new System.Drawing.Size(60, 13);
       this.lblLog.TabIndex = 45;
       this.lblLog.Text = "Debug Log";
       // 
-      // txtToken
+      // txtBotToken
       // 
-      this.txtToken.Location = new System.Drawing.Point(21, 34);
-      this.txtToken.Name = "txtToken";
-      this.txtToken.Size = new System.Drawing.Size(193, 20);
-      this.txtToken.TabIndex = 43;
-      this.txtToken.UseSystemPasswordChar = true;
+      this.txtBotToken.Location = new System.Drawing.Point(21, 34);
+      this.txtBotToken.Name = "txtBotToken";
+      this.txtBotToken.Size = new System.Drawing.Size(193, 20);
+      this.txtBotToken.TabIndex = 43;
       // 
       // lblBotTok
       // 
@@ -219,16 +218,17 @@ namespace ACT_DiscordTriggers {
       // 
       // logList
       // 
-      this.logList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+      this.logList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.logList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.listColTim,
             this.listColMsg});
       this.logList.FullRowSelect = true;
-      this.logList.Location = new System.Drawing.Point(21, 255);
+      this.logList.HideSelection = false;
+      this.logList.Location = new System.Drawing.Point(21, 225);
       this.logList.Name = "logList";
-      this.logList.Size = new System.Drawing.Size(461, 124);
+      this.logList.Size = new System.Drawing.Size(461, 146);
       this.logList.TabIndex = 61;
       this.logList.UseCompatibleStateImageBehavior = false;
       this.logList.View = System.Windows.Forms.View.Details;
@@ -264,10 +264,10 @@ namespace ACT_DiscordTriggers {
       this.Controls.Add(this.btnLeave);
       this.Controls.Add(this.btnJoin);
       this.Controls.Add(this.lblLog);
-      this.Controls.Add(this.txtToken);
+      this.Controls.Add(this.txtBotToken);
       this.Controls.Add(this.lblBotTok);
       this.Name = "DiscordPlugin";
-      this.Size = new System.Drawing.Size(506, 395);
+      this.Size = new System.Drawing.Size(506, 386);
       ((System.ComponentModel.ISupportInitialize)(this.sliderTTSSpeed)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.sliderTTSVol)).EndInit();
       this.ResumeLayout(false);
@@ -280,8 +280,8 @@ namespace ACT_DiscordTriggers {
     #endregion
 
     #region Init Variables
-    FormActMain.PlayTtsDelegate oldTTS;
-    FormActMain.PlaySoundDelegate oldSound;
+    //FormActMain.PlayTtsDelegate oldTTS;
+    //FormActMain.PlaySoundDelegate oldSound;
     Label lblStatus;
     string settingsFile;
     SettingsSerializer xmlSettings;
@@ -300,12 +300,14 @@ namespace ACT_DiscordTriggers {
     private Button btnLeave;
     private Button btnJoin;
     private Label lblLog;
-    private TextBox txtToken;
+    private TextBox txtBotToken;
     private ListView logList;
     private ColumnHeader listColTim;
     private ColumnHeader listColMsg;
     private Label lblBotTok;
     #endregion
+
+    private DiscordClient dc_client;
 
     public DiscordPlugin() {
       //Load UI Components and Assemblies
@@ -317,13 +319,14 @@ namespace ACT_DiscordTriggers {
       foreach (InstalledVoice v in tts.GetInstalledVoices())
         cmbTTS.Items.Add(v.VoiceInfo.Name);
       cmbTTS.SelectedIndex = 0;
+      this.dc_client = new DiscordClient();
     }
 
     #region IActPluginV1 Members
     public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText) {
       //ACT Stuff
-      oldTTS = ActGlobals.oFormActMain.PlayTtsMethod;
-      oldSound = ActGlobals.oFormActMain.PlaySoundMethod;
+      //oldTTS = ActGlobals.oFormActMain.PlayTtsMethod;
+      //oldSound = ActGlobals.oFormActMain.PlaySoundMethod;
       lblStatus = pluginStatusText;
       pluginScreenSpace.Controls.Add(this);
       pluginScreenSpace.Text = "Discord Triggers";
@@ -344,8 +347,16 @@ namespace ACT_DiscordTriggers {
       LoadSettings();
 
       //Discord Bot Stuff
-      DiscordClient.BotReady += BotReady;
-      DiscordClient.Log += Log;
+      if (dc_client != null)
+      {
+        Log("Set up DC client.");
+        dc_client.BotReady += BotReady;
+        dc_client.Log += Log;
+        dc_client.FetchSettingFunc += GetVoiceSettings;
+      } else
+      {
+        Log("Null DC Client.");
+      }
 
       if (chkAutoConnect.Checked)
         discordConnectbtn_Click(null, EventArgs.Empty);
@@ -354,11 +365,11 @@ namespace ACT_DiscordTriggers {
     }
 
     public async void DeInitPlugin() {
-      ActGlobals.oFormActMain.PlayTtsMethod = oldTTS;
-      ActGlobals.oFormActMain.PlaySoundMethod = oldSound;
+      //ActGlobals.oFormActMain.PlayTtsMethod = oldTTS;
+      //ActGlobals.oFormActMain.PlaySoundMethod = oldSound;
       SaveSettings();
       try {
-        await DiscordClient.deInIt();
+        await dc_client?.deInIt();
       } catch (Exception ex) {
         ActGlobals.oFormActMain.WriteExceptionLog(ex, "Error with DeInit of Discord Plugin.");
       }
@@ -390,35 +401,42 @@ namespace ACT_DiscordTriggers {
     #endregion
 
     #region Discord Methods
-    private void speak(string text) {
-      Log("Playing TTS for text: " + text);
-      try {
-        DiscordClient.Speak(text, cmbTTS.SelectedItem.ToString(), sliderTTSVol.Value, sliderTTSSpeed.Value);
-      } catch (Exception ex) {
-        Log("Error playing TTS");
-        Log(ex.Message);
-      }
-    }
+    //private void speak(string text) {
+    //  Log("Playing TTS for text: " + text);
+    //  try {
+    //    dc_client?.Speak(text, cmbTTS.SelectedItem.ToString(), sliderTTSVol.Value, sliderTTSSpeed.Value);
+    //  } catch (Exception ex) {
+    //    Log("Error playing TTS");
+    //    Log(ex.Message);
+    //  }
+    //}
 
-    private void speakFile(string path, int volume) {
-      Log("Playing Audio file: " + path);
-      try {
-        DiscordClient.SpeakFile(path);
-      } catch (Exception ex) {
-        Log("Error playing File");
-        Log(ex.Message);
-      }
-    }
+    //private void speakFile(string path, int volume) {
+    //  Log("Playing Audio file: " + path);
+    //  try {
+    //    dc_client?.SpeakFile(path);
+    //  } catch (Exception ex) {
+    //    Log("Error playing File");
+    //    Log(ex.Message);
+    //  }
+    //}
 
-    private void BotReady() {
+    private void BotReady()
+    {
       btnJoin.Enabled = true;
       populateServers();
     }
 
+    private void GetVoiceSettings(out string voice, out int vol, out int speed)
+    {
+      voice = cmbTTS.SelectedItem.ToString();
+      vol = sliderTTSVol.Value;
+      speed = sliderTTSSpeed.Value;
+    }
 
     private void populateServers() {
       try {
-        string[] servers = DiscordClient.getServers();
+        string[] servers = dc_client?.getServers();
         Log("Found " + servers.Length + " discord server(s).");
 
         cmbServer.Items.Clear();
@@ -438,7 +456,7 @@ namespace ACT_DiscordTriggers {
     private void populateChannels(string server) {
       try {
         cmbChan.Items.Clear();
-        cmbChan.Items.AddRange(DiscordClient.getChannels(server));
+        cmbChan.Items.AddRange(dc_client?.getChannels(server));
         if (cmbChan.Items.Count > 0) {
           cmbChan.SelectedIndex = 0;
           Log("Found " + cmbChan.Items.Count + " available voice channel(s) for " + server);
@@ -456,10 +474,10 @@ namespace ACT_DiscordTriggers {
     private async void btnJoin_Click(object sender, EventArgs e) {
 
       btnJoin.Enabled = false;
-      if (await DiscordClient.JoinChannel(cmbServer.SelectedItem.ToString(), cmbChan.SelectedItem.ToString())) {
+      if (await dc_client?.JoinChannel(cmbServer.SelectedItem.ToString(), cmbChan.SelectedItem.ToString())) {
         btnLeave.Enabled = true;
-        ActGlobals.oFormActMain.PlayTtsMethod = speak;
-        ActGlobals.oFormActMain.PlaySoundMethod = speakFile;
+        //ActGlobals.oFormActMain.PlayTtsMethod = speak;
+        //ActGlobals.oFormActMain.PlaySoundMethod = speakFile;
       } else {
         Log("Unable to join channel. Does your bot have permission to join this channel?");
         btnJoin.Enabled = true;
@@ -470,12 +488,12 @@ namespace ACT_DiscordTriggers {
     private void btnLeave_Click(object sender, EventArgs e) {
       btnLeave.Enabled = false;
       try {
-        DiscordClient.LeaveChannel();
+        dc_client?.LeaveChannel();
         btnJoin.Enabled = true;
         btnLeave.Enabled = false;
         Log("Left channel.");
-        ActGlobals.oFormActMain.PlayTtsMethod = oldTTS;
-        ActGlobals.oFormActMain.PlaySoundMethod = oldSound;
+        //ActGlobals.oFormActMain.PlayTtsMethod = oldTTS;
+        //ActGlobals.oFormActMain.PlaySoundMethod = oldSound;
         btnJoin.Enabled = true;
       } catch (Exception ex) {
         Log("Error leaving channel. Possible connection issue.");
@@ -490,11 +508,11 @@ namespace ACT_DiscordTriggers {
 
     private void discordConnectbtn_Click(object sender, EventArgs e) {
 
-      if (DiscordClient.IsConnected()) {
+      if ((dc_client?.IsConnected()).GetValueOrDefault(false)) {
         Log("Already connected to Discord.");
         return;
       }
-      DiscordClient.InIt(txtToken.Text);
+      dc_client?.InIt(txtBotToken.Text);
     }
 
     private void LogList_KeyUp(object sender, KeyEventArgs e) {
@@ -523,7 +541,7 @@ namespace ACT_DiscordTriggers {
     }
 
     public void LoadSettings() {
-      xmlSettings.AddControlSetting(txtToken.Name, txtToken);
+      xmlSettings.AddControlSetting(txtBotToken.Name, txtBotToken);
       xmlSettings.AddControlSetting(sliderTTSVol.Name, sliderTTSVol);
       xmlSettings.AddControlSetting(sliderTTSSpeed.Name, sliderTTSSpeed);
       xmlSettings.AddControlSetting(chkAutoConnect.Name, chkAutoConnect);
