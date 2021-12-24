@@ -86,17 +86,24 @@ namespace DiscordAPI
 
     private Task Bot_MessageReceived(SocketMessage message)
     {
-      // check if the message is a user message as opposed to a system message (e.g. Clyde, pins, etc.)
-      if (!(message is SocketUserMessage userMessage)) return Task.CompletedTask;
-      // check if the message origin is a guild message channel
-      if (!(userMessage.Channel is SocketTextChannel textChannel)) return Task.CompletedTask;
-      // trigger TTS
-      if (message.Content.StartsWith("!tts "))
-      {
-        FetchSettingFunc?.Invoke(out tts_voice, out tts_vol, out tts_speed);
-        Speak(message.Content.Substring(5), tts_voice, tts_vol, tts_speed);
-      }
-      return Task.CompletedTask;
+        try
+        {
+            // check if the message is a user message as opposed to a system message (e.g. Clyde, pins, etc.)
+            if (!(message is SocketUserMessage userMessage)) return Task.CompletedTask;
+            // check if the message origin is a guild message channel
+            if (!(userMessage.Channel is SocketTextChannel textChannel)) return Task.CompletedTask;
+            // trigger TTS
+            if (message.Content.StartsWith("!tts "))
+            {
+                FetchSettingFunc?.Invoke(out tts_voice, out tts_vol, out tts_speed);
+                Speak(message.Content.Substring(5), tts_voice, tts_vol, tts_speed);
+            }
+            return Task.CompletedTask;
+        }
+        catch (Exception ex)
+        {
+            return Task.CompletedTask;
+        }
     }
 
     public bool IsConnected()
